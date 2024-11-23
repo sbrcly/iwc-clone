@@ -23,7 +23,6 @@ const navButtonItems = [
 export default function MainHeader() {
     return (
         <>
-            <div className={classes["header-backdrop"]}></div>
             <header className={classes.header}>
                 <nav className={classes["header-content"]}>
                     <ul className={classes.paths}>

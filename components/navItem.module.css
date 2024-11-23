@@ -1,5 +1,5 @@
 li.item {
-    padding: 0 20px;
+    padding: 30px 20px;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 2px;
@@ -14,17 +14,18 @@ li.item:hover {
 
 div.dropdown {
     position: fixed;
-    top: -100%;
+    top: -50%;
     left: 0;
     width: 100vw;
     background-color: #fff;
     z-index: -1;
-    transition: all .5s;
+    transition: all .3s ease-in;
 }
 
 div.dropdown.show {
     top: -5%;
     z-index: 1;
+    transition: all .5s ease-out;
 }
 
 div.dropdown-backdrop {
@@ -33,10 +34,12 @@ div.dropdown-backdrop {
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(225, 225, 225, 0.0);
+    transition: all .6s .2s;
 }
 
 div.dropdown-backdrop.show {
-    backdrop-filter: blur(5px);
-    background-color: rgba(200, 200, 200, 0.5);
-    transition: all .3s;
+    backdrop-filter: blur(2px);
+    background-color: rgba(225, 225, 225, 0.5);
+    transition: all .2s;
 }

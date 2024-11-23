@@ -1,12 +1,3 @@
-.header-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 41px 0;
-    background-color: #fff;
-}
-
 header.header {
     position: sticky;
     top: 0;
@@ -16,13 +7,11 @@ header.header {
     z-index: 20;
     display: felx;
     align-items: flex-end;
-    margin-bottom: 30px;
 }
 
 nav.header-content {
     position: relative;
     top: 0;
-    padding-top: 30px;
     display: flex;
     width: 100%;
     max-width: 1800px;
