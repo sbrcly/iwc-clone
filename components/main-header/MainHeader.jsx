@@ -8,6 +8,9 @@ import NavPathItem from "./NavPathItem"
 import NavButtonItem from "./NavButtonItem"
 import ItemDropdown from "../item-dropdown/ItemDropdown.jsx"
 import Link from "next/link"
+import PrimaryLinkDropdown from "../item-dropdown/PrimaryLinkDropdown"
+import SearchDropdown from "../item-dropdown/SearchDropdown"
+import AccountDropdown from "../item-dropdown/AccountDropdown"
 
 const navPathItems = [
     'Watches',
@@ -30,8 +33,10 @@ export default function MainHeader() {
                     <ul className={classes.paths}>
                         {navPathItems.map(item => {
                             return (
-                                <NavPathItem key={item} title={item}>
-                                    <ItemDropdown item={item} />
+                                <NavPathItem key={item} title={item} type="primary">
+                                    <ItemDropdown item={item}>
+                                        <PrimaryLinkDropdown item={item} />
+                                    </ItemDropdown>
                                 </NavPathItem>
                             )
                         })}
@@ -49,7 +54,17 @@ export default function MainHeader() {
                     <ul className={classes.links}>
                         {navButtonItems.map(item => {
                             return (
-                                <NavButtonItem key={item} title={item} />
+                                <NavButtonItem key={item} title={item} type="primary">
+                                    <ItemDropdown item={item}>
+                                        {item === 'Search' && (
+                                            <SearchDropdown />
+                                        )}
+
+                                        {item === 'Account' && (
+                                            <AccountDropdown />
+                                        )}
+                                    </ItemDropdown>
+                                </NavButtonItem>
                             )
                         })}
                     </ul>

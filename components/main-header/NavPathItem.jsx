@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
 import classes from "./navItem.module.css"
 
-export default function NavPathItem({ title, children }) {
+export default function NavPathItem({ title, type, children }) {
     const [isHovering, setIsHovering] = useState(false)
     const [isClient, setIsClient] = useState(false)
 
@@ -17,20 +17,21 @@ export default function NavPathItem({ title, children }) {
     }
 
     const handleLeave = () => {
+        console.log('Setting is hovering!!');
         setIsHovering(false)
     }
 
     return (
         <>
             <li
-                className={classes.item}
+                className={`${classes.item} ${classes[type]}`}
                 onMouseEnter={handleHover}
                 onMouseLeave={handleLeave}
             >
                 <h3>{title}</h3>
                 {isClient && createPortal(
                     <>
-                        <div onMouseEnter={handleLeave} className={`${classes["dropdown-backdrop"]} ${isHovering ? classes.show : ''}`}></div>
+                        <div onMouseEnter={() => isHovering && handleLeave()} className={`${classes["dropdown-backdrop"]} ${isHovering ? classes.show : ''}`}></div>
                         <div className={`${classes.dropdown} ${isHovering ? classes.show : ''}`}>
                             {children}
                         </div>

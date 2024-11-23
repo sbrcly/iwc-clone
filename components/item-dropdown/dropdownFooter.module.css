@@ -1,0 +1,27 @@
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    padding: 20px 50px 25px 50px;
+}
+
+.list li {
+    display: flex;
+    align-items: center;
+}
+
+.list li p {
+    height: 24px;
+    align-self: center;
+}
+
+.list li p:nth-of-type(1) {
+    margin-right: 12px;
+    font-size: 20px;
+    align-self: center;
+}
