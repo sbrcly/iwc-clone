@@ -7,6 +7,7 @@ header.header {
     z-index: 20;
     display: felx;
     align-items: flex-end;
+    padding: 0 50px;
 }
 
 nav.header-content {
@@ -16,7 +17,7 @@ nav.header-content {
     width: 100%;
     max-width: 1800px;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     text-transform: uppercase;
     position: relative;
     margin: 0 auto;

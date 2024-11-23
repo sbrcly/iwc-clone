@@ -1,5 +1,5 @@
 div.dropdown-content {
-    padding-top: 200px;
+    padding: 200px 50px 0px 50px;
     max-width: 1800px;
     margin: 0 auto;
 }

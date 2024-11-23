@@ -1,8 +1,14 @@
+import Hero from "@/components/Hero"
+
 import classes from "./page.module.css"
 
 export default function Home() {
   return (
-    <main className={classes.main}>
+    <main>
+      <Hero />
+      <section className={classes.test}>
+
+      </section>
     </main>
   )
 }

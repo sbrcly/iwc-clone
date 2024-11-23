@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { MdOutlineShoppingBag } from "react-icons/md"
 
 import iwcLogo from "@/public/iwc_logo_transparent.png"
 
@@ -6,6 +7,7 @@ import classes from "./mainHeader.module.css"
 import NavPathItem from "./NavPathItem"
 import NavButtonItem from "./NavButtonItem"
 import PathItemDropdown from "./PathItemDropdown"
+import Link from "next/link"
 
 const navPathItems = [
     'Watches',
@@ -17,7 +19,7 @@ const navPathItems = [
 const navButtonItems = [
     'Search',
     'Account',
-    'Cart'
+    <MdOutlineShoppingBag />
 ]
 
 export default function MainHeader() {
@@ -37,12 +39,14 @@ export default function MainHeader() {
                         })}
                     </ul>
                     <div className={classes.logo}>
-                        <Image
-                            src={iwcLogo}
-                            alt="IWC Schaffhausen Logo"
-                            width={125}
-                            priority
-                        />
+                        <Link href="/">
+                            <Image
+                                src={iwcLogo}
+                                alt="IWC Schaffhausen Logo"
+                                width={125}
+                                priority
+                            />
+                        </Link>
                     </div>
                     <ul className={classes.links}>
                         {navButtonItems.map(item => {
