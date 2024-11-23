@@ -34,7 +34,7 @@ div.dropdown-backdrop {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 5;
+    z-index: 4;
     background-color: rgba(255, 255, 255, 0);
     transition: all .6s .2s;
 }
@@ -42,6 +42,7 @@ div.dropdown-backdrop {
 div.dropdown-backdrop.show {
     backdrop-filter: blur(5px);
     background-color: rgba(100, 100, 100, 0.5);
+    z-index: 5;
     transition: all .2s;
 }
 

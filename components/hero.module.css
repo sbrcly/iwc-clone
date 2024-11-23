@@ -10,10 +10,6 @@ section.hero {
     align-items: center;
     overflow: hidden;
 }
-  
-.video {
-    width: 100vw;
-}
 
 .hero-content {
     position: relative;
