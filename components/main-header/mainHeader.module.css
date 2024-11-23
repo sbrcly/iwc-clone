@@ -1,0 +1,41 @@
+header.header {
+    position: sticky;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    background-color: #fff;
+    z-index: 20;
+    display: felx;
+    align-items: flex-end;
+    padding: 0 50px;
+}
+
+nav.header-content {
+    position: relative;
+    top: 0;
+    display: flex;
+    width: 100%;
+    max-width: 1800px;
+    height: 75px;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+div.logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+ul.paths {
+    display: flex;
+    align-items: center;
+}
+
+ul.links {
+    display: flex;
+    align-items: center;
+}

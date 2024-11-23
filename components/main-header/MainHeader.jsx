@@ -6,7 +6,7 @@ import iwcLogo from "@/public/iwc_logo_transparent.png"
 import classes from "./mainHeader.module.css"
 import NavPathItem from "./NavPathItem"
 import NavButtonItem from "./NavButtonItem"
-import PathItemDropdown from "./PathItemDropdown"
+import ItemDropdown from "../item-dropdown/ItemDropdown.jsx"
 import Link from "next/link"
 
 const navPathItems = [
@@ -31,7 +31,7 @@ export default function MainHeader() {
                         {navPathItems.map(item => {
                             return (
                                 <NavPathItem key={item} title={item}>
-                                    <PathItemDropdown item={item} />
+                                    <ItemDropdown item={item} />
                                 </NavPathItem>
                             )
                         })}
@@ -57,4 +57,4 @@ export default function MainHeader() {
             </header>
         </>
     )
-};
+}

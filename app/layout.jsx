@@ -1,4 +1,6 @@
-import MainHeader from "@/components/MainHeader.jsx"
+import MainHeader from "@/components/main-header/MainHeader.jsx"
+import MainFooter from "@/components/main-footer/MainFooter.jsx"
+
 import "./globals.css"
 
 export const metadata = {
@@ -12,6 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <MainHeader />
         {children}
+        <MainFooter />
       </body>
     </html>
   )

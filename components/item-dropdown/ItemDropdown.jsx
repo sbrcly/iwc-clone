@@ -1,10 +1,11 @@
 import Image from "next/image"
 
-import classes from "./pathItemDropdown.module.css"
+import classes from "./itemDropdown.module.css"
 
 import heroImg from "@/public/hero.jpeg"
+import DropdownFooter from "./DropdownFooter.jsx"
 
-export default function PathItemDropdown({ item }) {
+export default function ItemDropdown({ item }) {
     return (
         <div className={classes["dropdown-content"]}>
             <div className={classes["dropdown-content-main"]}>
@@ -15,9 +16,7 @@ export default function PathItemDropdown({ item }) {
                     alt="Green Portofino Watch"
                 />
             </div>
-            <footer>
-                <p>This is the footer...</p>
-            </footer>
+            <DropdownFooter />
         </div>
     )
-};
+}
