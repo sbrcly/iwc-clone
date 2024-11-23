@@ -2,7 +2,7 @@ import MainHeader from "@/components/MainHeader.jsx"
 import "./globals.css"
 
 export const metadata = {
-  title: "IWC Clone",
+  title: "Swiss Luxury Watches | IWC Schaffhausen",
   description: "Clone of the IWC Watches website",
 }
 

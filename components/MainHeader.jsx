@@ -31,9 +31,7 @@ export default function MainHeader() {
                         {navPathItems.map(item => {
                             return (
                                 <NavPathItem key={item} title={item}>
-                                    <PathItemDropdown
-                                        item={item}
-                                    />
+                                    <PathItemDropdown item={item} />
                                 </NavPathItem>
                             )
                         })}

@@ -7,12 +7,17 @@ import heroImg from "@/public/hero.jpeg"
 export default function PathItemDropdown({ item }) {
     return (
         <div className={classes["dropdown-content"]}>
-            <h1>{item}</h1>
-            <Image
-                src={heroImg}
-                width={200}
-                alt="Green Portofino Watch"
-            />
+            <div className={classes["dropdown-content-main"]}>
+                <h1>{item}</h1>
+                <Image
+                    src={heroImg}
+                    width={200}
+                    alt="Green Portofino Watch"
+                />
+            </div>
+            <footer>
+                <p>This is the footer...</p>
+            </footer>
         </div>
     )
 };
