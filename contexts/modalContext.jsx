@@ -5,14 +5,17 @@ import { createContext, useContext, useState } from "react"
 const ModalContext = createContext()
 
 export const ModalContextProvider = ({ children }) => {
-    const [state, setState] = useState('Inital State')
+    const [modalState, setModalState] = useState({
+        isOpen: false,
+        current: ''
+    })
 
     const updateState = (newState) => {
-        setState(newState)
+        setModalState(newState)
     }
 
     return (
-        <ModalContext.Provider value={{ state, updateState }}>
+        <ModalContext.Provider value={{ modalState, updateState }}>
             {children}
         </ModalContext.Provider>
     )

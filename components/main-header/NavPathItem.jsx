@@ -5,13 +5,8 @@ import { useModalContext } from "@/contexts/modalContext"
 import { createPortal } from "react-dom"
 import classes from "./navItem.module.css"
 
-export default function NavPathItem({ title, children }) {
-    const { state, updateState } = useModalContext()
-
-    console.log('State: ', state)
-    console.log('UpdateState: ', updateState)
-    
-    const [isHovering, setIsHovering] = useState(false)
+export default function NavPathItem({ title, type, children }) {
+    const { modalState, updateState } = useModalContext()
     const [isClient, setIsClient] = useState(false)
 
     useEffect(() => {
@@ -19,25 +14,33 @@ export default function NavPathItem({ title, children }) {
     }, [])
 
     const handleHover = () => {
-        setIsHovering(true)
+        updateState({
+            isOpen: true,
+            current: title
+        })
     }
 
     const handleLeave = () => {
-        setIsHovering(false)
+        updateState({
+            isOpen: false,
+            current: ''
+        })
     }
+
+    const isOpen = modalState.isOpen && modalState.current === title
 
     return (
         <>
             <li
-                className={classes.item}
+                className={`${classes.item} ${classes[type]}`}
                 onMouseEnter={handleHover}
                 onMouseLeave={handleLeave}
             >
                 <h3>{title}</h3>
                 {isClient && createPortal(
                     <>
-                        <div onMouseEnter={handleLeave} className={`${classes["dropdown-backdrop"]} ${isHovering ? classes.show : ''}`}></div>
-                        <div className={`${classes.dropdown} ${isHovering ? classes.show : ''}`}>
+                        <div onMouseEnter={handleLeave} className={`${classes["dropdown-backdrop"]} ${isOpen ? classes.show : ''}`}></div>
+                        <div className={`${classes.dropdown} ${isOpen ? classes.show : ''}`}>
                             {children}
                         </div>
                     </>,
