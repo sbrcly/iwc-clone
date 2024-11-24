@@ -3,7 +3,22 @@
     margin-right: 25px;
 }
 
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
 .title {
     margin-top: 14px;
+    font-size: 15px;
     letter-spacing: 1px;
+}
+
+.image {
+    transition: transform 0.3s ease;
+}
+
+.image:hover {
+    transform: scale(1.04);
+    transition: all .4s;
 }
