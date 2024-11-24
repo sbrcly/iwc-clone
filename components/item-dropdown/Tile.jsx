@@ -1,11 +1,27 @@
+"use client"
+
 import Image from "next/image"
 
 import classes from "./tile.module.css"
 import Link from "next/link"
+import { useModalContext } from "@/contexts/modalContext"
 
 export default function Tile({ tile }) {
+    const { updateState } = useModalContext()
+
+    const handleClick = () => {
+        updateState({
+            isOpen: false,
+            current: '',
+            hold: false
+        })
+    }
+
     return (
-        <div className={classes.tile}>
+        <div
+            onClick={handleClick}
+            className={classes.tile}
+        >
             <Link href={tile.href}>
                 <div className={classes["image-wrapper"]}>
                     <Image
