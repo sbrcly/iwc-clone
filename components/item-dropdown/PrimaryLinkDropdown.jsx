@@ -6,8 +6,6 @@ import Tile from "./Tile"
 export default function PrimaryLinkDropdown({ id }) {
     const data = HEADER_OPTIONS[id]
 
-    console.log(data)
-
     if (!data) {
         return
     }
