@@ -1,10 +1,16 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useModalContext } from "@/contexts/modalContext"
 import { createPortal } from "react-dom"
 import classes from "./navItem.module.css"
 
-export default function NavPathItem({ title, type, children }) {
+export default function NavPathItem({ title, children }) {
+    const { state, updateState } = useModalContext()
+
+    console.log('State: ', state)
+    console.log('UpdateState: ', updateState)
+    
     const [isHovering, setIsHovering] = useState(false)
     const [isClient, setIsClient] = useState(false)
 
@@ -17,21 +23,20 @@ export default function NavPathItem({ title, type, children }) {
     }
 
     const handleLeave = () => {
-        console.log('Setting is hovering!!');
         setIsHovering(false)
     }
 
     return (
         <>
             <li
-                className={`${classes.item} ${classes[type]}`}
+                className={classes.item}
                 onMouseEnter={handleHover}
                 onMouseLeave={handleLeave}
             >
                 <h3>{title}</h3>
                 {isClient && createPortal(
                     <>
-                        <div onMouseEnter={() => isHovering && handleLeave()} className={`${classes["dropdown-backdrop"]} ${isHovering ? classes.show : ''}`}></div>
+                        <div onMouseEnter={handleLeave} className={`${classes["dropdown-backdrop"]} ${isHovering ? classes.show : ''}`}></div>
                         <div className={`${classes.dropdown} ${isHovering ? classes.show : ''}`}>
                             {children}
                         </div>

@@ -1,6 +1,8 @@
 import MainHeader from "@/components/main-header/MainHeader.jsx"
 import MainFooter from "@/components/main-footer/MainFooter.jsx"
 
+import { ModalContextProvider } from "@/contexts/modalContext"
+
 import "./globals.css"
 
 export const metadata = {
@@ -12,9 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <MainHeader />
-        {children}
-        <MainFooter />
+        <ModalContextProvider>
+          <MainHeader />
+            {children}
+          <MainFooter />
+        </ModalContextProvider>
       </body>
     </html>
   )
