@@ -1,16 +1,24 @@
 import { CiGlobe } from "react-icons/ci"
 
 import classes from "./dropdownFooter.module.css"
-import NavButtonItem from "../main-header/NavButtonItem"
+import NavButtonItem from "../main-header/NavButtonItem.jsx"
+import PageLink from "../PageLink.jsx"
+import HelpAndContactDropdown from "./HelpAndContactDropdown.jsx"
 
-export default function DropdownFooter() {
+export default function DropdownFooter({ item }) {
     return (
         <footer>
             <hr />
             <div className={classes.links}>
                 <ul className={classes.list}>
-                    <NavButtonItem title="Help & Contact" type="secondary" />
-                    <NavButtonItem title="FAQ" type="secondary" />
+                    <NavButtonItem key="Help & Contact" id={`hc-${item}`} title="Help & Contact" type="secondary">
+                        <div className={classes["dropdown-content"]}>
+                            <div className={classes["dropdown-content-main"]}>
+                                <HelpAndContactDropdown />
+                            </div>
+                        </div>
+                    </NavButtonItem>
+                    <PageLink title="FAQ" href="/faq" />
                 </ul>
                 <ul className={classes.list}>
                     <li>

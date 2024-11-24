@@ -5,7 +5,7 @@ import { useModalContext } from "@/contexts/modalContext"
 import { createPortal } from "react-dom"
 import classes from "./navItem.module.css"
 
-export default function NavButtonItem({ title, type, children }) {
+export default function NavButtonItem({ title, id, type, children }) {
     const { modalState, updateState } = useModalContext()
     const [isClient, setIsClient] = useState(false)
 
@@ -14,20 +14,24 @@ export default function NavButtonItem({ title, type, children }) {
     }, [])
 
     const handleClick = () => {
+        const hold = !(modalState.isOpen && modalState.current === id)
+        const updateIsOpen = modalState.current === id || modalState.current === '' ? !modalState.isOpen : modalState.isOpen
+
         updateState({
-            isOpen: !modalState.isOpen,
-            current: !modalState.isOpen ? title : ''
+            isOpen: updateIsOpen,
+            current: !modalState.isOpen || modalState.current !== id ? id : '',
+            hold: hold
         })
     }
 
-    const isOpen = modalState.isOpen && modalState.current === title
+    const isOpen = modalState.isOpen && modalState.current === id
 
     return (
         <li
-            onClick={handleClick}
             className={`${classes.item} ${classes[type]}`}
         >
             <h3
+                onClick={handleClick}
                 className={typeof title === 'object' ? classes.icon : ''}
             >{title}</h3>
 

@@ -25,3 +25,9 @@
     font-size: 20px;
     align-self: center;
 }
+
+div.dropdown-content {
+    padding: 200px 50px 0px 50px;
+    max-width: 2000px;
+    margin: 0 auto;
+}

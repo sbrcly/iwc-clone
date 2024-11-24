@@ -7,7 +7,7 @@ export default function ItemDropdown({ item, children }) {
             <div className={classes["dropdown-content-main"]}>
                 {children}
             </div>
-            <DropdownFooter />
+            <DropdownFooter item={item} />
         </div>
     )
 }

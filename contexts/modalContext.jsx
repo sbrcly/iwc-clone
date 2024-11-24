@@ -7,7 +7,8 @@ const ModalContext = createContext()
 export const ModalContextProvider = ({ children }) => {
     const [modalState, setModalState] = useState({
         isOpen: false,
-        current: ''
+        current: '',
+        hold: false
     })
 
     const updateState = (newState) => {

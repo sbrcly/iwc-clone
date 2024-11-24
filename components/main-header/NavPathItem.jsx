@@ -14,17 +14,23 @@ export default function NavPathItem({ title, type, children }) {
     }, [])
 
     const handleHover = () => {
-        updateState({
-            isOpen: true,
-            current: title
-        })
+        if (!modalState.hold) {
+            updateState({
+                isOpen: true,
+                current: title,
+                hold: false
+            })
+        }
     }
 
     const handleLeave = () => {
-        updateState({
-            isOpen: false,
-            current: ''
-        })
+        if (!modalState.hold) {
+            updateState({
+                isOpen: false,
+                current: '',
+                hold: false
+            })
+        }
     }
 
     const isOpen = modalState.isOpen && modalState.current === title

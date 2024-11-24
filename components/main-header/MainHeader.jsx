@@ -20,9 +20,9 @@ const navPathItems = [
 ]
 
 const navButtonItems = [
-    'Search',
-    'Account',
-    <MdOutlineShoppingBag />
+    { id: 'search', content: 'Search' },
+    { id: 'account', content: 'Account' },
+    { id: 'cart', content: <MdOutlineShoppingBag /> }
 ]
 
 export default function MainHeader() {
@@ -54,13 +54,13 @@ export default function MainHeader() {
                     <ul className={classes.links}>
                         {navButtonItems.map(item => {
                             return (
-                                <NavButtonItem key={item} title={item} type="primary">
+                                <NavButtonItem key={item.id} id={item.id} title={item.content} type="primary">
                                     <ItemDropdown item={item}>
-                                        {item === 'Search' && (
+                                        {item.id === 'search' && (
                                             <SearchDropdown />
                                         )}
 
-                                        {item === 'Account' && (
+                                        {item.id === 'account' && (
                                             <AccountDropdown />
                                         )}
                                     </ItemDropdown>
