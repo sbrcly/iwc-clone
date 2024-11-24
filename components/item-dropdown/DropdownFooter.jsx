@@ -5,13 +5,13 @@ import NavButtonItem from "../main-header/NavButtonItem.jsx"
 import PageLink from "../PageLink.jsx"
 import HelpAndContactDropdown from "./HelpAndContactDropdown.jsx"
 
-export default function DropdownFooter({ item }) {
+export default function DropdownFooter({ id }) {
     return (
         <footer>
             <hr />
             <div className={classes.links}>
                 <ul className={classes.list}>
-                    <NavButtonItem key="Help & Contact" id={`hc-${item}`} title="Help & Contact" type="secondary">
+                    <NavButtonItem key="Help & Contact" id={`hc-${id}`} title="Help & Contact" type="secondary">
                         <div className={classes["dropdown-content"]}>
                             <div className={classes["dropdown-content-main"]}>
                                 <HelpAndContactDropdown />

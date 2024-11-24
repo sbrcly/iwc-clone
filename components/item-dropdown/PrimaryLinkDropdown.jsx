@@ -1,16 +1,31 @@
-import Image from "next/image"
+import classes from "./primaryLinkDropdown.module.css"
 
-import heroImg from "@/public/hero.jpeg"
+import { HEADER_OPTIONS } from "@/data"
+import Tile from "./Tile"
 
-export default function PrimaryLinkDropdown({ item }) {
+export default function PrimaryLinkDropdown({ id }) {
+    const data = HEADER_OPTIONS[id]
+
+    console.log(data)
+
+    if (!data) {
+        return
+    }
+
     return (
-        <>
-            <h1>{item}</h1>
-            <Image
-                src={heroImg}
-                width={200}
-                alt="Green Portofino Watch"
-            />
-        </>
+        <div className={classes.content}>
+            <h1 className={classes.title}>{data.title}</h1>
+            <div className={classes.main}>
+                <div className={classes["tiles-container"]}>
+                    <ul className={classes.tiles}>
+                        {data.tiles.map(tile => {
+                            return (
+                                <Tile key={tile.id} tile={tile} />
+                            )
+                        })}
+                    </ul>
+                </div>
+            </div>
+        </div>
     )
 };

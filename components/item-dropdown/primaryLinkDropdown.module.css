@@ -1,0 +1,25 @@
+.content {
+    padding: 0 60px;
+}
+
+.title {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tiles-container {
+    display: flex;
+}
+
+.tiles {
+    display: flex;
+}

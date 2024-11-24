@@ -13,10 +13,10 @@ import SearchDropdown from "../item-dropdown/SearchDropdown"
 import AccountDropdown from "../item-dropdown/AccountDropdown"
 
 const navPathItems = [
-    'Watches',
-    'Accessories',
-    'Service',
-    'More'
+    { id: 'watches', content: 'Watches' },
+    { id: 'accessories', content: 'Accessories' },
+    { id: 'service', content: 'Service' },
+    { id: 'more', content: 'More' }
 ]
 
 const navButtonItems = [
@@ -33,9 +33,9 @@ export default function MainHeader() {
                     <ul className={classes.paths}>
                         {navPathItems.map(item => {
                             return (
-                                <NavPathItem key={item} title={item} type="primary">
-                                    <ItemDropdown item={item}>
-                                        <PrimaryLinkDropdown item={item} />
+                                <NavPathItem key={item.id} id={item.id} title={item.content} type="primary">
+                                    <ItemDropdown id={item.id}>
+                                        <PrimaryLinkDropdown id={item.id} />
                                     </ItemDropdown>
                                 </NavPathItem>
                             )
@@ -55,7 +55,7 @@ export default function MainHeader() {
                         {navButtonItems.map(item => {
                             return (
                                 <NavButtonItem key={item.id} id={item.id} title={item.content} type="primary">
-                                    <ItemDropdown item={item}>
+                                    <ItemDropdown item={item.id}>
                                         {item.id === 'search' && (
                                             <SearchDropdown />
                                         )}

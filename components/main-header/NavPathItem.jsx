@@ -5,7 +5,7 @@ import { useModalContext } from "@/contexts/modalContext"
 import { createPortal } from "react-dom"
 import classes from "./navItem.module.css"
 
-export default function NavPathItem({ title, type, children }) {
+export default function NavPathItem({ title, id, type, children }) {
     const { modalState, updateState } = useModalContext()
     const [isClient, setIsClient] = useState(false)
 
@@ -17,7 +17,7 @@ export default function NavPathItem({ title, type, children }) {
         if (!modalState.hold) {
             updateState({
                 isOpen: true,
-                current: title,
+                current: id,
                 hold: false
             })
         }
@@ -33,7 +33,7 @@ export default function NavPathItem({ title, type, children }) {
         }
     }
 
-    const isOpen = modalState.isOpen && modalState.current === title
+    const isOpen = modalState.isOpen && modalState.current === id
 
     return (
         <>
