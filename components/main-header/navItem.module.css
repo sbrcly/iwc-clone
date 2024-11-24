@@ -23,6 +23,12 @@ li.item:hover {
     opacity: 1;
 }
 
+li.item h3 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
 div.dropdown {
     position: fixed;
     top: -80%;
