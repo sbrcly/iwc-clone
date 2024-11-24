@@ -36,7 +36,7 @@ export const HEADER_OPTIONS = {
                 id: '6',
                 title: "All Watches",
                 image: "/images/watches/all/all_watches_hero.avif",
-                href: "/watches/all-watches"
+                href: "/watches"
             },
         ]
     },
