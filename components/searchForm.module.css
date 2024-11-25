@@ -1,0 +1,22 @@
+.form {
+    width: 100%;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input {
+    border: none;
+    font-size: 22px;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    flex-grow: 2;
+}
+
+.search {
+    font-size: 28px;
+}

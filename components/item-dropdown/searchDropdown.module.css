@@ -1,4 +1,11 @@
-.content {}
+.content {
+    position: relative;
+    width: 100%;
+}
+
+.form-container {
+    width: 100%;
+}
 
 .tiles-container {
     display: flex;
