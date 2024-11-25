@@ -7,8 +7,6 @@ import { HEADER_OPTIONS } from "@/data"
 export default function SearchDropdown(params) {
     const collections = HEADER_OPTIONS.watches.tiles.filter(tile => tile.id !== "all")
 
-    console.log(collections)
-
     return (
         <div className={classes.content}>
             <div className={classes["tiles-container"]}>
