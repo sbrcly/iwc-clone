@@ -2,6 +2,7 @@ import classes from "./primaryLinkDropdown.module.css"
 
 import { HEADER_OPTIONS } from "@/data"
 import Tile from "./Tile"
+import LinkList from "../LinkList"
 
 export default function PrimaryLinkDropdown({ id }) {
     const data = HEADER_OPTIONS[id]
@@ -9,6 +10,8 @@ export default function PrimaryLinkDropdown({ id }) {
     if (!data) {
         return
     }
+
+    const linkListClass = data.linkLists?.length > 1 ? "multiple" : "single"
 
     return (
         <div className={classes.content}>
@@ -22,6 +25,13 @@ export default function PrimaryLinkDropdown({ id }) {
                             )
                         })}
                     </ul>
+                </div>
+                <div className={`${classes["link-lists"]} ${classes[linkListClass]}`}>
+                    {data.linkLists && data.linkLists.map(list => {
+                        return (
+                            <LinkList key={list.id} data={list} />
+                        )
+                    })}
                 </div>
             </div>
         </div>

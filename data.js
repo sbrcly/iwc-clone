@@ -38,6 +38,34 @@ export const HEADER_OPTIONS = {
                 image: "/images/watches/all/all_watches_hero.avif",
                 href: "/watches"
             },
+        ],
+        linkLists: [
+            {
+                id: "1",
+                title: "Special Collections",
+                links: [
+                    {
+                        id: "1",
+                        content: "Portugieser Eternal Calendar",
+                        href: "/"
+                    },
+                    {
+                        id: "2",
+                        content: "The Portugieser Novelties",
+                        href: "/"
+                    },
+                    {
+                        id: "3",
+                        content: "Colored Ceramics",
+                        href: "/"
+                    },
+                    {
+                        id: "4",
+                        content: "Chronograph Watches",
+                        href: "/"
+                    }
+                ]
+            }
         ]
     },
     accessories: {
@@ -61,6 +89,29 @@ export const HEADER_OPTIONS = {
                 image: "/images/accessories/boxes/boxes_hero.avif",
                 href: "/accessories/boxes"
             },
+        ],
+        linkLists: [
+            {
+                id: "1",
+                title: "More Accessories",
+                links: [
+                    {
+                        id: "1",
+                        content: "Strap Materials",
+                        href: "/"
+                    },
+                    {
+                        id: "2",
+                        content: "Quick Change System",
+                        href: "/"
+                    },
+                    {
+                        id: "3",
+                        content: "Trace Your Strap",
+                        href: "/"
+                    }
+                ]
+            }
         ]
     },
     service: {
@@ -90,6 +141,29 @@ export const HEADER_OPTIONS = {
                 image: "/images/service/warranty/warranty_hero.avif",
                 href: "/services/my-iwc"
             },
+        ],
+        linkLists: [
+            {
+                id: "1",
+                title: "Other Services",
+                links: [
+                    {
+                        id: "1",
+                        content: "Warranties",
+                        href: "/"
+                    },
+                    {
+                        id: "2",
+                        content: "Service FAQ",
+                        href: "/"
+                    },
+                    {
+                        id: "3",
+                        content: "Trade In Service",
+                        href: "/"
+                    }
+                ]
+            }
         ]
     },
     more: {
@@ -112,6 +186,75 @@ export const HEADER_OPTIONS = {
                 title: "IWC Museum",
                 image: "/images/more/museum/museum_hero.avif",
                 href: "/museum"
+            }
+        ],
+        linkLists: [
+            {
+                id: "1",
+                title: "Inspiration",
+                links: [
+                    {
+                        id: "1",
+                        content: "The Journal",
+                        href: "/"
+                    },
+                    {
+                        id: "2",
+                        content: "Podcast",
+                        href: "/"
+                    },
+                    {
+                        id: "3",
+                        content: "Partnerships",
+                        href: "/"
+                    },
+                    {
+                        id: "4",
+                        content: "Forum",
+                        href: "/"
+                    },
+                    {
+                        id: "5",
+                        content: "IWC X Wev3",
+                        href: "/"
+                    },
+                    {
+                        id: "6",
+                        content: "Complications",
+                        href: "/"
+                    },
+                    {
+                        id: "7",
+                        content: "Calibres",
+                        href: "/"
+                    },
+                ]
+            },
+            {
+                id: "2",
+                title: "About IWC",
+                links: [
+                    {
+                        id: "1",
+                        content: "Our History",
+                        href: "/"
+                    },
+                    {
+                        id: "2",
+                        content: "Sustainability",
+                        href: "/"
+                    },
+                    {
+                        id: "3",
+                        content: "IWC App",
+                        href: "/"
+                    },
+                    {
+                        id: "4",
+                        content: "Collections Archive",
+                        href: "/"
+                    }
+                ]
             }
         ]
     }
