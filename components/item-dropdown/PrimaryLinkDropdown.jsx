@@ -21,7 +21,12 @@ export default function PrimaryLinkDropdown({ id }) {
                     <ul className={classes.tiles}>
                         {data.tiles.map(tile => {
                             return (
-                                <Tile key={tile.id} tile={tile} />
+                                <Tile
+                                    key={tile.id}
+                                    imgSource="image"
+                                    tile={tile}
+                                    size="275"
+                                />
                             )
                         })}
                     </ul>

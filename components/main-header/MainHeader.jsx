@@ -34,7 +34,7 @@ export default function MainHeader() {
                         {navPathItems.map(item => {
                             return (
                                 <NavPathItem key={item.id} id={item.id} title={item.content} type="primary">
-                                    <ItemDropdown id={item.id}>
+                                    <ItemDropdown type="contained" id={item.id}>
                                         <PrimaryLinkDropdown id={item.id} />
                                     </ItemDropdown>
                                 </NavPathItem>
@@ -55,15 +55,17 @@ export default function MainHeader() {
                         {navButtonItems.map(item => {
                             return (
                                 <NavButtonItem key={item.id} id={item.id} title={item.content} type="primary">
-                                    <ItemDropdown item={item.id}>
-                                        {item.id === 'search' && (
+                                    {item.id === 'search' && (
+                                        <ItemDropdown type="full" item={item.id}>
                                             <SearchDropdown />
-                                        )}
+                                        </ItemDropdown>
+                                    )}
 
-                                        {item.id === 'account' && (
+                                    {item.id === 'account' && (
+                                        <ItemDropdown type="minimum" item={item.id}>
                                             <AccountDropdown />
-                                        )}
-                                    </ItemDropdown>
+                                        </ItemDropdown>
+                                    )}
                                 </NavButtonItem>
                             )
                         })}

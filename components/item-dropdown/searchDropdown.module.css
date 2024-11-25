@@ -1,0 +1,10 @@
+.content {}
+
+.tiles-container {
+    display: flex;
+}
+
+.tiles {
+    display: flex;
+    margin-bottom: 50px;
+}

@@ -6,34 +6,39 @@ export const HEADER_OPTIONS = {
                 id: '1',
                 title: "Pilot's Watches",
                 image: "/images/watches/pilots/pilot_hero.avif",
+                altImage: "/images/watches/pilots/pilot_hero_alt.avif",
                 href: "/watches/pilot-watches"
             },
             {
                 id: '2',
                 title: "Portugieser",
                 image: "/images/watches/portugieser/portugieser_hero.avif",
+                altImage: "/images/watches/portugieser/portugieser_hero_alt.avif",
                 href: "/watches/portugieser-watches"
             },
             {
                 id: '3',
                 title: "Portofino",
                 image: "/images/watches/portofino/portofino_hero.avif",
+                altImage: "/images/watches/portofino/portofino_hero_alt.avif",
                 href: "/watches/portofino-watches"
             },
             {
                 id: '4',
                 title: "Ingenieur",
                 image: "/images/watches/ingenieur/ingenieur_hero.avif",
+                altImage: "/images/watches/ingenieur/ingenieur_hero_alt.avif",
                 href: "/watches/ingenieur-watches"
             },
             {
                 id: '5',
                 title: "Aquatimer",
                 image: "/images/watches/aquatimer/aquatimer_hero.avif",
+                altImage: "/images/watches/aquatimer/aquatimer_hero_alt.avif",
                 href: "/watches/aquatimer-watches"
             },
             {
-                id: '6',
+                id: 'all',
                 title: "All Watches",
                 image: "/images/watches/all/all_watches_hero.avif",
                 href: "/watches"
