@@ -7,9 +7,7 @@ import LinkList from "../LinkList"
 export default function PrimaryLinkDropdown({ id }) {
     const data = HEADER_OPTIONS[id]
 
-    if (!data) {
-        return
-    }
+    if (!data) return
 
     const linkListClass = data.linkLists?.length > 1 ? "multiple" : "single"
 

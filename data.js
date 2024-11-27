@@ -1,3 +1,5 @@
+import { MdOutlineShoppingBag } from "react-icons/md"
+
 export const HEADER_OPTIONS = {
     watches: {
         title: "Watch Families",
@@ -264,3 +266,16 @@ export const HEADER_OPTIONS = {
         ]
     }
 }
+
+export const NAV_PATH_ITEMS = [
+    { id: 'watches', content: 'Watches' },
+    { id: 'accessories', content: 'Accessories' },
+    { id: 'service', content: 'Service' },
+    { id: 'more', content: 'More' }
+]
+
+export const NAV_BUTTON_ITEMS = [
+    { id: 'search', content: 'Search' },
+    { id: 'account', content: 'Account' },
+    { id: 'cart', content: <MdOutlineShoppingBag /> }
+]

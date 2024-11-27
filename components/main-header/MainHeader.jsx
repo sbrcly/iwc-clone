@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { MdOutlineShoppingBag } from "react-icons/md"
 
 import iwcLogo from "@/public/iwc_logo_transparent.png"
 
@@ -12,18 +11,7 @@ import PrimaryLinkDropdown from "../item-dropdown/PrimaryLinkDropdown"
 import SearchDropdown from "../item-dropdown/SearchDropdown"
 import AccountDropdown from "../item-dropdown/AccountDropdown"
 
-const navPathItems = [
-    { id: 'watches', content: 'Watches' },
-    { id: 'accessories', content: 'Accessories' },
-    { id: 'service', content: 'Service' },
-    { id: 'more', content: 'More' }
-]
-
-const navButtonItems = [
-    { id: 'search', content: 'Search' },
-    { id: 'account', content: 'Account' },
-    { id: 'cart', content: <MdOutlineShoppingBag /> }
-]
+import { NAV_PATH_ITEMS, NAV_BUTTON_ITEMS } from "@/data"
 
 export default function MainHeader() {
     return (
@@ -31,7 +19,7 @@ export default function MainHeader() {
             <header className={classes.header}>
                 <nav className={classes["header-content"]}>
                     <ul className={classes.paths}>
-                        {navPathItems.map(item => {
+                        {NAV_PATH_ITEMS.map(item => {
                             return (
                                 <NavPathItem key={item.id} id={item.id} title={item.content} type="primary">
                                     <ItemDropdown type="contained" id={item.id}>
@@ -52,7 +40,7 @@ export default function MainHeader() {
                         </Link>
                     </div>
                     <ul className={classes.links}>
-                        {navButtonItems.map(item => {
+                        {NAV_BUTTON_ITEMS.map(item => {
                             return (
                                 <NavButtonItem key={item.id} id={item.id} title={item.content} type="primary">
                                     {item.id === 'search' && (

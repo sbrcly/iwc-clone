@@ -22,7 +22,7 @@ export default function SearchDropdown() {
                                 key={collection.id}
                                 imgSource="altImage"
                                 tile={collection}
-                                size="400"
+                                size="250"
                             />
                         )
                     })}
