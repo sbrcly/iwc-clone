@@ -1,3 +1,4 @@
+import CloseButton from "../CloseButton"
 import SearchForm from "../SearchForm"
 import classes from "./searchDropdown.module.css"
 
@@ -10,6 +11,9 @@ export default function SearchDropdown() {
 
     return (
         <div className={classes.content}>
+            <div className={classes["button-container"]}>
+                <CloseButton />
+            </div>
             <div className={classes["form-container"]}>
                 <SearchForm />
                 <hr />

@@ -1,0 +1,62 @@
+.close {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.x {
+    margin-left: 10px;
+    position: relative;
+}
+
+.line-one,
+.line-two {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    box-sizing: border-box;
+    width: 16px;
+    border-bottom: 1px solid #000;
+}
+
+.line-one {
+    transform: rotate(-45deg);
+}
+
+.line-two {
+    transform: rotate(45deg);
+}
+
+.close:hover .line-one {
+    animation: spinCloseOne .6s forwards;
+}
+
+.close:hover .line-two {
+    animation: spinCloseTwo .6s forwards;
+}
+
+@keyframes spinCloseOne {
+    0% {
+        transform: rotate(-45deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinCloseTwo {
+    0% {
+        opacity: 1;
+        transform: rotate(45deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+}
