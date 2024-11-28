@@ -32,11 +32,11 @@
 }
 
 .close:hover .line-one {
-    animation: spinCloseOne .6s forwards;
+    animation: spinCloseOne .6s both;
 }
 
 .close:hover .line-two {
-    animation: spinCloseTwo .6s forwards;
+    animation: spinCloseTwo .6s both;
 }
 
 @keyframes spinCloseOne {
