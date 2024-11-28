@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import Overlay from "@/components/Overlay"
+import Overlay from "@/components/UI/Overlay.jsx"
 import classes from "./hero.module.css"
 import Video from "./Video"
 

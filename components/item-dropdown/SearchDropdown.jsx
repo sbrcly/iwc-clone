@@ -1,4 +1,4 @@
-import CloseButton from "../CloseButton"
+import CloseButton from "../UI/CloseButton.jsx"
 import SearchForm from "../SearchForm"
 import classes from "./searchDropdown.module.css"
 
