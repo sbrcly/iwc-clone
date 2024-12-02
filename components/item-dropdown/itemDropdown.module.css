@@ -10,3 +10,7 @@ div.dropdown-content.contained {
 div.dropdown-content.full {
     max-width: 100vw;
 }
+
+div.dropdown-content.minimum {
+    max-width: 500px;
+}

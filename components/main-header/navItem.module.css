@@ -39,6 +39,12 @@ div.dropdown {
     transition: all .4s ease-in;
 }
 
+div.dropdown.minimum {
+    width: 500px;
+    left: unset;
+    right: 0;
+}
+
 div.dropdown.show {
     top: 0;
     z-index: 10;

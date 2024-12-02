@@ -26,6 +26,14 @@ export default function NavButtonItem({ title, id, type, children }) {
 
     const isOpen = modalState.isOpen && modalState.current === id
 
+    let width = null
+
+    if (id === 'search') {
+        width = 'full'
+    }   else if (id === 'account') {
+        width = 'minimum'
+    }
+
     return (
         <li
             className={`${classes.item} ${classes[type]}`}
@@ -38,7 +46,7 @@ export default function NavButtonItem({ title, id, type, children }) {
             {isClient && createPortal(
                 <>
                     <div className={`${classes["dropdown-backdrop"]} ${isOpen ? classes.show : ''}`}></div>
-                    <div className={`${classes.dropdown} ${isOpen ? classes.show : ''}`}>
+                    <div className={`${classes.dropdown} ${isOpen ? classes.show : ''} ${classes[width]}`}>
                         {children}
                     </div>
                 </>,

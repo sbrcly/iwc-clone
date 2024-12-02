@@ -1,5 +1,10 @@
-export default function AccountDropdown(params) {
+import classes from "./accountDropdown.module.css"
+
+export default function AccountDropdown() {
     return (
-        <p>Account Dropdown</p>
+        <div className={classes.options}>
+            <button className={classes.option}>Sign In</button>
+            <button className={classes.option}>Register</button>
+        </div>
     )
 };
