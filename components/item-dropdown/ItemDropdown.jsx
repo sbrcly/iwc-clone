@@ -7,7 +7,9 @@ export default function ItemDropdown({ id, type, children }) {
             <div>
                 {children}
             </div>
-            <DropdownFooter id={id} />
+            {type !== "minimum" && (
+                <DropdownFooter id={id} />
+            )}
         </div>
     )
 }
